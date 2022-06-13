@@ -1,4 +1,4 @@
-**Создать запросы в Postman.**  
+**Создать запросы в Postman.**
   
 **Protocol: http**  
 **IP: 162.55.220.72**  
@@ -7,16 +7,16 @@
 EP_1  
 Method: GET  
 EndPoint: /get_method  
-request url params: 
+request url params:  
  name: str  
  age: int  
   
-response: 
+response:  
 [  
     “Str”,  
     “Str”  
 ]  
-
+  
 ```
 Прописываем в окружение ip:, port:162.55.220.72, name:Alexander, age:43.  
 В строке запроса выбираем метод GET и пишем путь к эндпойнту:  
@@ -32,58 +32,61 @@ name: {{name}}
     "Alexander",  
     "43"  
 ]  
-
-
-
-==================
-
-EP_2
-Method: POST
-EndPoint: /user_info_3
-request form data: 
- name: str
- age: int
- salary: int
-
-response: 
-{'name': name,
-          'age': age,
-          'salary': salary,
-          'family': {'children': [['Alex', 24], ['Kate', 12]],
-                     'u_salary_1_5_year': salary * 4}}
-
-
-В окружение дописываем salary:1000
-В строке запроса выбираем метод POST и пишем путь к эндпойнту:
-http://{{ip}}:{{port}}/user_info_3
-
-Перейти во вкладку body.
-В form-data прописать:
-age: {{age}}
-name: {{name}}
-salary: {{salary}}
-
-Сохранить, послать запрос.
-В результатах запроса:
-{
-    "age": "43",
-    "family": {
-        "children": [
-            [
-                "Alex",
-                24
-            ],
-            [
-                "Kate",
-                12
-            ]
-        ],
-        "u_salary_1_5_year": 4000
-    },
-    "name": "Alexander",
-    "salary": 1000
-}
-
+```
+  
+  
+==================  
+  
+EP_2  
+Method: POST  
+EndPoint: /user_info_3  
+request form data:  
+ name: str  
+ age: int  
+ salary: int  
+  
+response:  
+{'name': name,  
+          'age': age,  
+          'salary': salary,  
+          'family': {'children': [['Alex', 24], ['Kate', 12]],  
+                     'u_salary_1_5_year': salary * 4}}  
+  
+  
+```
+В окружение дописываем salary:1000  
+В строке запроса выбираем метод POST и пишем путь к эндпойнту:  
+http://{{ip}}:{{port}}/user_info_3  
+  
+Перейти во вкладку body.  
+В form-data прописать:  
+age: {{age}}  
+name: {{name}}  
+salary: {{salary}}  
+  
+Сохранить, послать запрос.  
+В результатах запроса:  
+{  
+    "age": "43",  
+    "family": {  
+        "children": [  
+            [  
+                "Alex",  
+                24  
+            ],  
+            [  
+                "Kate",  
+                12  
+            ]  
+        ],  
+        "u_salary_1_5_year": 4000  
+    },  
+    "name": "Alexander",  
+    "salary": 1000  
+}  
+```
+  
+  
 ==================
 
 EP_3
