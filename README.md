@@ -259,7 +259,8 @@ response:
 		  'age': int(age),  
 		  'salary': [salary, str(salary * 2), str(salary * 3)]}  
  
- 
+  
+```
 В строке запроса выбираем метод GET и пишем путь к эндпойнту:  
 http://{{ip}}:{{port}}//object_info_4  
  
